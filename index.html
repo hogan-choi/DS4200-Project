@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="d3_plots/average_depression_histogram.js" defer></script> 
+    <script src="d3_plots/depression_bar_plot.js" defer></script>
 </head>
 <body>
     <header>
@@ -105,8 +108,10 @@
 
          <!-- Embedded Analysis 1 -->
          <section>
-            <h2>Analysis 1: Stress Level by Course</h2>
-            <iframe src="stress_course_cgpa_with_slope copy.html" width="100%" height="600px" style="border:none;"></iframe>
+            <h2 style="margin-bottom: 10px;">Analysis 1: Stress Levels</h2>
+
+            <h3 style="margin-bottom: 10px;">Bar Plot:Stress Level by Course</h3>
+            <iframe src="./html_plots/stress_course_cgpa_with_slope copy.html" width="100%" height="600px" style="border:none;"></iframe>
             <!-- Description -->
             <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
                 This interactive graph shows the relationship between average stress level and course. From this graph, we can find that the students from the Medical course have the highest stress level, which is higher than 3. Then you can choose different courses to see the relationship between CGPA and the specific course.
@@ -143,11 +148,11 @@
 
         <!-- Embedded Analysis 2 -->
         <section style="margin: 0; padding: 0;">
-            <h2 style="margin-bottom: 10px;">Analysis 2: Stress Level and CGPA Relationship</h2>
+            <h3 style="margin-bottom: 10px;">Stress Level and CGPA Relationship</h3>
             
             <!-- Adjust iframe style -->
             <iframe 
-                src="correlation_stress_level copy.html" 
+                src="./html_plots/correlation_stress_level copy.html" 
                 width="100%" 
                 height="270px" 
                 style="border: none; margin: 0; padding: 0; display: block;">
@@ -160,6 +165,105 @@
         
             <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
                 Conversely, financial stress has the strongest negative correlation, highlighting that financial stability significantly reduces stress levels. Other factors, such as physical activity, semester credit load, and sleep quality, show weaker negative correlations, suggesting these contribute to slightly lower stress. These insights emphasize the importance of supporting high-performing students, promoting physical activity, addressing financial concerns, and improving sleep quality to enhance student well-being.
+            </p>
+        </section>
+
+        <!-- Depression Analysis -->
+         <section style="margin: 0; padding: 0;">
+            <!-- Title header for Depression Scores -->
+            <h2 style="margin-bottom: 10px;">Analysis 2: Depression Scores</h2>
+            
+            <!-- Static Depression Plots -->
+            <!-- Title -->
+            <h3 style="margin-bottom: 10px;">Histogram and Bar Plot: Depression Score and CGPA Distribution</h3>
+            <!-- Add graph -->
+            <div style="display: flex; justify-content: center; gap: 10px;">
+                <div id="histogram" style="flex: 1;"></div>
+                <div id="barplot" style="flex: 1;"></div>
+            </div>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                The first bar chart, titled “Overall Average Depression Score by CGPA,” shows the relationship between students' CGPA 
+                and average depression scores. The graph suggests that students with around a 3.2 and a 2.40 CGPA show the highest average 
+                depression score. The result indicates that students across different academic performance levels experience similar 
+                depression levels, implying that factors other than academic success may contribute more to depression scores.
+            </p>
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                The second bar chart, "Overall Depression Score Distribution," shows the overall depression score distribution among the 
+                student population. Most students have depression scores between 0 and 3, with 3 being the most common depression score 
+                among students, which shows students typically have a mild to moderate depression level. Depression scores of 4 and 5 are 
+                less frequent, indicating that fewer students report higher depression levels.
+            </p>
+
+            <!-- Interactive Depression Plots -->
+            <h3 style="margin-bottom: 10px;">Interactive Histogram Plot: Average Depression Score and Different Factors</h3>
+            <!-- Add graph -->
+            <div style="text-align: center;">
+                <iframe 
+                    src="./html_plots/avg_depression_by_cgpa_gender.html" 
+                    width="100%" 
+                    height="525px" 
+                    style="border:none;">
+                </iframe>
+            </div>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                The bar chart is divided into two sections, comparing average depression scores across different CGPA ranges (binned) for
+                male and female students. We create the following interactive plot so that the user can choose different levels of students’ 
+                physical activity (“High,” “Low,” and “Moderate”) and stress levels from 0 to 5 to explore how these factors impact depression 
+                scores.
+            </p>
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                More information to be added.       
+            </p>
+         </section>
+
+
+        <!-- Anxiety Analysis -->
+        <section style="margin: 0; padding: 0;">
+            <!-- Title header for Anxiety Levels -->
+            <h2 style="margin-bottom: 10px;">Analysis 3: Anxiety Levels</h2>
+
+            <!-- Static Anxiety Plot -->
+            <!-- Title -->
+            <h3 style="margin-bottom: 10px;">Heatmap Plot: Relationship between Sleep Quality, Physical Activity, and Anxiety Score</h3>
+            <!-- Add graph -->
+            <div style="text-align: center;">
+                <iframe 
+                    src="./html_plots/anxiety_heatmap.html" 
+                    width="90%" 
+                    height="500px" 
+                    style="border:none;">
+                </iframe>
+            </div>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                Add description for heatmap.
+            </p>
+
+            <!-- Interactive Anxiety Plot -->
+            <!-- Title -->
+            <h3 style="margin-bottom: 10px;">Histogram Plot: Anxiety Score and CGPA Distribution</h3>
+            <!-- Add graph -->
+            <iframe 
+                src="cgpa_distribution.html" 
+                width="100%" 
+                height="510px" 
+                style="border:none;">
+            </iframe>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                Add description for histogram.
+            </p>
+        </section>
+        
+        <!-- Conclusion Section -->
+        <section style="margin: 0; padding: 0;">
+            <!-- Title -->
+            <h2 style="margin-bottom: 10px;">Conclusion</h2>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                Add conclusion.
             </p>
         </section>
     </main>
