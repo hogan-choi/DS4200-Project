@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-84e2c78112963d140c694a98e174ec1e"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "(datum.Correlation_with_Stress_Level > 0)", "value": "blue"}, "value": "red"}, "x": {"field": "Correlation_with_Stress_Level", "scale": {"domain": [-0.1, 0.1]}, "title": "Correlation with Stress Level", "type": "quantitative"}, "y": {"field": "Variable", "sort": "-x", "type": "ordinal"}}, "title": "Correlation with Stress Level (Male, Age 18-25)", "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-84e2c78112963d140c694a98e174ec1e": [{"Variable": "CGPA", "Correlation_with_Stress_Level": -0.002358900647648519}, {"Variable": "Sleep_Quality", "Correlation_with_Stress_Level": 0.0024972791549034727}, {"Variable": "Physical_Activity", "Correlation_with_Stress_Level": 0.00087385712472607}, {"Variable": "Diet_Quality", "Correlation_with_Stress_Level": -0.00020144742982378583}, {"Variable": "Social_Support", "Correlation_with_Stress_Level": -0.006774934270942824}, {"Variable": "Financial_Stress", "Correlation_with_Stress_Level": 0.0026187869076030653}, {"Variable": "Extracurricular_Involvement", "Correlation_with_Stress_Level": -0.0034100474115147787}, {"Variable": "Semester_Credit_Load", "Correlation_with_Stress_Level": 0.0013114452189706114}, {"Variable": "Age", "Correlation_with_Stress_Level": -0.04794192448822446}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

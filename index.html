@@ -178,53 +178,22 @@
             </table>
         </section>
 
-         <!-- Embedded Analysis 1 -->
-         <section>
+        <!-- Embedded Analysis 1 -->
+        <section style="margin: 0; padding: 0;">
             <h2 style="margin-bottom: 10px;">Analysis 1: Stress Levels</h2>
 
-            <h3 style="margin-bottom: 10px;">Bar Plot: Stress Level by Course</h3>
-            <iframe src="./html_plots/stress_course_cgpa_with_slope copy.html" width="100%" height="600px" style="border:none;"></iframe>
-            <!-- Description -->
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                This interactive graph shows the relationship between average stress level and course. From this graph, we can find that the students from the Medical course have the highest stress level, which is higher than 3. Then you can choose different courses to see the relationship between CGPA and the specific course.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the Business course graph, we can find that the slope of the regression line is 0.24, which shows that the students in Business courses have higher stress levels when their CGPA is higher. This may mean that the courses are difficult, so it’s stressful to get a good CGPA.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the Computer Science course graph, we can see that the slope of the regression line is -0.19. This means that the students are less stressed when their CGPA is higher. This may show that the students who perform well in courses may think the courses are not very difficult.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the Law course graph, the slope of the regression line is 0.05. This indicates a very slight positive relationship between CGPA and stress level, suggesting that students in Law courses experience relatively stable stress levels regardless of their performance. The low slope suggests other factors, such as external expectations or personal interests, may play a larger role in their stress levels.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the Engineering course graph, the slope of the regression line is 0.02, which is almost flat. This indicates a negligible relationship between CGPA and stress level for Engineering students. The slight positive slope may imply that stress marginally increases as students achieve higher grades, but the effect is minimal.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the Medical course graph, the slope of the regression line is 0.06. This small positive slope suggests that students in Medical courses experience slightly more stress as their CGPA increases. Given the high average stress level for Medical students, this reinforces the notion that Medical studies are demanding, and the pressure to excel academically adds to their overall stress.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                From the “Others” course category graph, the slope of the regression line is -0.07. This indicates a slight negative relationship between CGPA and stress level, suggesting that students in this category feel less stressed when they perform better academically. This could imply that students in “Other” courses find their studies manageable, or that good performance boosts their confidence and reduces stress.
-            </p>
-        
-            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                In summary, this interactive graph highlights how stress levels vary across courses and how they correlate with academic performance (CGPA). While courses like Business and Medical show a positive correlation between CGPA and stress, suggesting that achieving higher grades may be more stressful, courses like Computer Science and “Others” show a negative or negligible correlation, indicating less stress for better-performing students. These insights provide valuable information on how different academic environments influence student stress.
-            </p>
-        </section>
-
-        <!-- Embedded Analysis 2 -->
-        <section style="margin: 0; padding: 0;">
             <h3 style="margin-bottom: 10px;">Stress Level and Various Factors Relationship</h3>
             
             <!-- Adjust iframe style -->
             <iframe 
-                src="./html_plots/correlation_stress_level copy.html" 
+                src="./html_plots/female_correlation_stress_level.html" 
+                width="100%" 
+                height="270px" 
+                style="border: none; margin: 0; padding: 0; display: block;">
+            </iframe>
+
+            <iframe 
+                src="./html_plots/male_correlation_stress_level.html" 
                 width="100%" 
                 height="270px" 
                 style="border: none; margin: 0; padding: 0; display: block;">
@@ -232,11 +201,67 @@
         
             <!-- Description -->
             <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                This graph shows the correlation between various factors and stress levels among female individuals aged 18-25. The strongest positive correlation is with CGPA, suggesting that students with higher academic performance may experience slightly higher stress, possibly due to increased expectations or workload. Diet quality and extracurricular involvement also show small positive correlations, indicating that students balancing additional commitments or paying attention to diet might feel a slight increase in stress.
+                The two graphs shows the correlation between various factors and stress levels among female and male individuals aged 18-25. For female individuals, the strongest positive correlation is with CGPA, suggesting that students with higher academic performance may experience slightly higher stress, possibly due to increased expectations or workload. Conversely, financial stress has the strongest negative correlation, highlighting that financial stability significantly reduces stress levels. These insights emphasize the importance of supporting high-performing female students and addressing financial concerns to enhance student well-being.
             </p>
         
             <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
-                Conversely, financial stress has the strongest negative correlation, highlighting that financial stability significantly reduces stress levels. Other factors, such as age, semester credit load, and physical activity, show weaker negative correlations, suggesting these contribute to slightly lower stress. These insights emphasize the importance of supporting high-performing students, promoting physical activity, and addressing financial concerns to enhance student well-being.
+                For male individuals, the strongest negative correlation is with age, suggesting that younger males in this age group may experience higher stress levels compared to their older counterparts. This insight highlights the need for targeted support for younger male students to help them better manage stress during this transitional phase of life.
+            </p>
+        </section>
+
+        <!-- Embedded Analysis 2 -->
+        <section>
+
+            <h3 style="margin-bottom: 10px;">Bar Plot: Stress Level by Course</h3>
+            <iframe src="./html_plots/interactive_boxplot_courses_fixed_axis.html" width="100%" height="600px" style="border:none;"></iframe>
+            <!-- Description -->
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                This interactive graph shows the relationship between average stress level and course. On this graph, the user can 
+                click the dropdown button to see the box plot which shows the relationship between CGPA and stress level of the specific 
+                course. On the specific course graph, the user can also choose whether or not to display box plots for a certain stress level, 
+                making it easier to compare partial box plots.
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;"></p>
+                From the first graph, we can find that the students from the Medical course have the highest stress level, which is higher than 3. 
+                Then you can choose different courses to see the relationship between CGPA and the specific course.
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                From the Engineering course graph, the median CGPA is slightly lower at Stress Levels 2-3, indicating that the academic performance of some engineering students suffers in this range of stress levels. The outliers are more pronounced at higher stress levels, possibly reflecting higher fluctuations in performance for some students under high stress.
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                From the Business course graph, we can find that median CGPAs in Business programs were higher overall, suggesting that Business students performed more consistently across stress levels. With fewer outliers, the impact of stress levels on academic performance may be relatively small.
+            </p>
+        
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                From the Computer Science course graph, we can see that the median CGPA for Computer Science students was higher at Stress Levels 0 and 1, indicating that low stress levels may help students achieve better academic performance. Higher Stress Levels (4-5) have more outliers, reflecting that some students perform poorly under high stress.
+            </p>
+
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                From the Law course graph, The CGPA of Law students was consistently higher at low stress levels (0-2), but the distribution widened at Stress Level 3 and above.
+            </p>
+        
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                From the Medical course graph, Stress Level 3 students showed more fluctuations in CGPA with a wider distribution. The relative concentration of performance at high stress levels may indicate that some Medical students are able to maintain stable academic performance under high stress.
+            </p>
+        
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                The “Others” course category graph shows more pronounced outliers under Stress Levels 3 and 4, which may require further analysis of the characteristics of these courses. 
+            </p>    
+        
+            <p style="font-size: 16px; line-height: 1.6; margin-top: 15px;">
+                In summary, this interactive graph highlights how stress levels vary across 
+                courses and how they correlate with academic performance (CGPA). 
+                Engineering programs and medical programs may require more stress management 
+                support to help students better cope with high levels of stress. Students in 
+                business programs may be better able to adapt to stressful situations. Student 
+                performance fluctuates more at high stress levels: the wider distribution of CGPA 
+                at high stress levels suggests that stress may affect the stability of academic 
+                performance to some extent. Low Stress Levels May Help Academic Performance: At 
+                low stress levels (Stress Level 0-1), CGPAs in most programs showed high and 
+                stable medians, suggesting that moderate stress management may be beneficial.
             </p>
         </section>
 
