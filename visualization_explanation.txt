@@ -1,0 +1,69 @@
+This is a text file that explains the design for our visualizations as well as the marks and channels used for each graphical plots. 
+
+For more information, please check the following GitHub website: https://hogan-choi.github.io/DS4200-Project/
+
+Stress Levels:
+  1. Stress Level and Various Factors Relationship:
+     This bar chart shows the correlation between the different categories of the dataset with stress levels for females aged 18 - 25 years old.
+
+     Marks:
+	- The bars on the graph are used to represent the magnitude and direction of the correlation coefficients for each variable.
+     Channels:
+	- The x-axis is used to display the strength and direction of the correlation for each feature.
+	- The y-axis is used to display the features (CGPA, Diet Quality, and Financial Stress).
+     	- The colors are used to differentiate between the different directions of the bar's correlation (blue for positive, red for negative).
+  2. Stress Level by Course:
+     This is a bar chart that depicts the stress average stress levels for each course in the dataset.
+     
+     Marks: 
+	- The bars on the graph are used to represent the numerical value of the average stress levels per class. 
+     Channels:
+	- The x-axis is used to display the different classes that are present within the dataset.
+	- The y-axis is used to display the magnitude of the stress levels for each class.
+
+Depression Scores: 
+  1. Depression Score and CGPA Distribution:
+     This chart represents two graphs side-by-side. The histogram depicts the average depression scores across the CGPA range. The bar chart displays the distribution of      
+     students per depression score.
+
+     Marks: 
+     Bars are used to represent the data values for both graphs (average depression scores for the histogram and the number of students for the bar graph). 
+     Channels: 
+	- The x-axis is used to encode the CGPA ranges and the depression score levels for the graphs.
+	- The y-axis is used to depict the average depression scores for the histogram and the number of students for the bar plot. 
+  2. Average Depression Score and Different Factors: 
+     This is an interactive bar plot that graphically represents the relationship between students' physical activity levels, their stress levels, and their relationship with    
+     depression scores.
+
+     Marks: 
+     Bars are used to represent the average depression scores for each relationship. 
+     Channels:
+	- The x-axis is used display the different bins for CGPAs. 
+	- The y-axis is used to portray the magnitude of average depression scores for each CGPA bin.
+
+Anxiety Levels: 
+  1. Relationship between Sleep Quality, Physical Activity, and Anxiety Score:
+     This is a heatmap that displays the relationship of different categories for sleep quality and physical activity with relation to anxiety score.
+
+     Marks:
+	- The cells in the heatmap are used to represent the intersection of sleep quality levels and physical activity levels.
+     Channels:
+	- The x-axis is used to depict the different categories for the Physical Activity feature.
+	- The y-axis is used to depict the different categories for the Sleep Quality feature.
+     	- The color gradient for each cell displays the magnitude for the average anxiety score. Darker colors correlate with lower anxiety scores while brighter colors are 
+          associated with higher anxiety scores.
+	- The text within each cell is used to depict the exact value of the average anxiety score for each feature intersection.
+
+  2. This is an interactive horizontally stacked bar chart, showing the distribution of anxiety scores across different features (social support, relationship status, 
+     substance use, counseling services, and extracurricular involvement). Users can use the dropdown menu to select different categories to see various perspectives.
+
+     Marks: 
+	- The bars on the graph are used to represent the different features for a selected category.
+	- The bar segments represent the proportion of individuals at different anxiety score levels with the given category.
+     Channels:
+	- The x-axis is used to show the proportion of individuals at each anxiety score.
+	- The y-axis is used to distinguish the different features for a selected category.
+	- The color is used to encode the different anxiety score levels (0 - 5).
+	- The interactivity from the dropdown menu is used so that users can view different visualizations for the various categories of the dataset.
+
+    
